@@ -23,7 +23,7 @@ const Login = () => {
           </label>
           <input type="text" placeholder="Enter password" className="input input-bordered input-info w-full max-w-lg h-10" />    
           </  div>
-          <a to="#" className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'>Don't have account?</a>4
+          <Link to="/signup" className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'>Don't have account?</Link>
           <div>
             <button className="btn btn-block btn-sm mt-2">Login</button>
           </div>

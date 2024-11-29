@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from "dotenv"
 import cookieParser from 'cookie-parser';
+import cors from "cors";
 
 // Routes
 import authRoutes from './Routes/auth.route.js'
@@ -19,6 +20,7 @@ dotenv.config();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser())
+app.use(cors({ origin: "http://localhost:3000" }));
 
 app.use("/api/auth",authRoutes)
 app.use("/api/messages",messageRoutes)

@@ -22,7 +22,7 @@ export const signup = async (req, res) => {
             const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=Scott${username}`
             const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=Scott${username}`
 
-            const newUser = new User.create({
+            const newUser = new User({
                 fullname,
                 username,
                 password: hashedPassword,
