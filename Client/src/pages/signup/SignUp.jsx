@@ -78,7 +78,9 @@ console.log(useSignup());
         <GenderCheckBox onCheckBoxChange={handleCheckBoxChange} selectGender={inputs.gender} />
         <Link to="/login" className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'>already have account?</Link>
           <div>
-            <button className="btn btn-block btn-sm mt-2">Sign Up</button>
+            <button className="btn btn-block btn-sm mt-2" disabled={loading}>
+              {loading ? <span className='loading loading-spinner'></span> : 'Sign Up'}
+            </button>
           </div>
         </form>
       </div>
